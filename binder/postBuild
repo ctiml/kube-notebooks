@@ -11,7 +11,7 @@ jupyter trust index.ipynb
 
 BUILD_PATH=/home/jovyan
 KUBECTL_VERSION=v1.12.7
-mkdir ${BUILD_PATH}/bin
+mkdir -p ${BUILD_PATH}/bin
 curl -sLo ${BUILD_PATH}/bin/kubectl "https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl" && chmod +x ${BUILD_PATH}/bin/kubectl
 
 export PATH="${BUILD_PATH}/bin:$PATH"
